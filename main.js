@@ -10,12 +10,13 @@ const backToTop = document.getElementById("backToTop");
 backToTop.addEventListener("click", function (e) {
   scrollTop(1000, 500);
 });
+
 function scrollTop(scroll, duration) {
   let doc = document.documentElement;
   let currentTime = duration;
   let speed = 10;
 
-  let animate = () => {
+  const animate = () => {
     if (currentTime < 0) return;
     setTimeout(() => {
       doc.scrollTop -= doc.scrollTop / (currentTime / speed);
@@ -27,6 +28,7 @@ function scrollTop(scroll, duration) {
 
   animate();
 }
+
 window.addEventListener("scroll", function (e) {
   if (document.documentElement.scrollTop > 250) {
     backToTop.style.display = "flex";
