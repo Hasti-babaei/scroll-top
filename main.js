@@ -15,6 +15,7 @@ function scrollTop(scroll, duration) {
   let doc = document.documentElement;
   let currentTime = duration;
   let speed = 10;
+
   let animate = () => {
     if (currentTime < 0) return;
     setTimeout(() => {
